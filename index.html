@@ -2,6 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tính Tiền Điện</title>
     <style>
         body {
@@ -15,22 +16,24 @@
             height: 100vh;
         }
         .container {
-            max-width: 400px;
-            width: 90%;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            width: 100vw;
+            height: 100vh;
+            max-width: 100vw;
+            max-height: 100vh;
+            margin: 0;
+            padding: 40px 16px;
+            border: none;
+            border-radius: 0;
             background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         input, select, button {
-            margin: 10px 0;
-            padding: 10px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
+            margin: 16px 0;
+            padding: 16px;
+            font-size: 1.2rem;
         }
         button {
             background-color: #007bff;
@@ -42,20 +45,34 @@
             background-color: #0056b3;
         }
         h3 {
-            text-align: center;
-            color: #333;
+            font-size: 2rem;
+            margin-bottom: 24px;
         }
         #result {
-            margin-top: 20px;
+            font-size: 1.4rem;
+            margin-top: 32px;
             font-weight: bold;
             text-align: center;
         }
         @media (max-width: 600px) {
             .container {
-                padding: 15px;
+                width: 100vw;
+                height: auto;
+                min-height: 100vh;
+                padding: 24px 8px;
             }
             input, select, button {
-                padding: 8px;
+                padding: 12px;
+                font-size: 1rem;
+                margin: 12px 0;
+            }
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+            }
+            #result {
+                font-size: 1.1rem;
+                margin-top: 24px;
             }
         }
     </style>
@@ -98,6 +115,8 @@
             let totalBill = bill + vat;
             document.getElementById("result").innerText = "Tiền điện phải trả: " + totalBill.toLocaleString() + " VND";
         }
+
+        document.getElementById("year").value = 2025;
     </script>
 </body>
 </html>
