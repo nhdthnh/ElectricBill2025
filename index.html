@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tính Tiền Điện 2025 - Premium</title>
+    <title>Tính Tiền Điện Sinh Hoạt Mới Nhất 2026 - QĐ 2892/QĐ-BCT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
         rel="stylesheet">
     <style>
         :root {
@@ -20,6 +20,9 @@
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --accent: #38bdf8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
         }
 
         * {
@@ -36,26 +39,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 24px 16px;
         }
 
         .container {
             width: 100%;
-            max-width: 600px;
+            max-width: 680px;
             background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             border: 1px solid var(--glass-border);
             border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.6s ease-out;
+            padding: 36px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 0.5s ease-out;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(16px);
             }
 
             to {
@@ -64,129 +67,240 @@
             }
         }
 
+        .header-badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            text-align: center;
+        }
+
+        .header-wrapper {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
         h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2.2rem;
+            font-weight: 800;
             margin-bottom: 8px;
-            text-align: center;
-            background: linear-gradient(to right, #60a5fa, #a855f7);
+            background: linear-gradient(to right, #60a5fa, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         p.subtitle {
-            text-align: center;
             color: var(--text-muted);
-            margin-bottom: 32px;
             font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .tab-switch {
+            display: flex;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            border: 1px solid var(--glass-border);
+            gap: 4px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px 14px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: center;
+            box-shadow: none;
+            margin-top: 0;
+        }
+
+        .tab-btn.active {
+            background: rgba(37, 99, 235, 0.8);
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .tab-btn:hover:not(.active) {
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+            transform: none;
         }
 
         .pricing-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            margin-bottom: 32px;
-            font-size: 0.85rem;
-            border-radius: 12px;
+            margin-bottom: 24px;
+            font-size: 0.88rem;
+            border-radius: 14px;
             overflow: hidden;
             border: 1px solid var(--glass-border);
         }
 
         .pricing-table th {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 12px 14px;
             text-align: left;
             color: var(--accent);
             font-weight: 600;
         }
 
         .pricing-table td {
-            padding: 10px 12px;
+            padding: 10px 14px;
             border-top: 1px solid var(--glass-border);
             background: rgba(255, 255, 255, 0.02);
         }
 
-        .input-group {
+        .pricing-table tr:hover td {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .input-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
             margin-bottom: 16px;
         }
 
         .input-field {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
         }
 
         label {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 600;
             color: var(--text-muted);
-            margin-left: 4px;
+            margin-left: 2px;
         }
 
-        input {
-            background: rgba(0, 0, 0, 0.2);
+        input, select {
+            background: rgba(0, 0, 0, 0.25);
             border: 1px solid var(--glass-border);
             border-radius: 12px;
-            padding: 14px 16px;
+            padding: 12px 14px;
             color: white;
-            font-size: 1rem;
-            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            transition: all 0.25s ease;
+            width: 100%;
         }
 
-        input:focus {
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+            padding-right: 36px;
+        }
+
+        select option {
+            background: #1e293b;
+            color: white;
+        }
+
+        input:focus, select:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
-            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+            background: rgba(0, 0, 0, 0.35);
         }
 
-        button {
+        .btn-calc {
             width: 100%;
-            background: var(--primary);
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
             color: white;
             border: none;
             border-radius: 12px;
-            padding: 16px;
-            font-size: 1.1rem;
+            padding: 15px;
+            font-size: 1.05rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            margin-top: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.25s ease;
+            margin-top: 20px;
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
         }
 
-        button:hover {
-            background: var(--primary-hover);
+        .btn-calc:hover {
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 10px 22px rgba(37, 99, 235, 0.45);
         }
 
-        button:active {
+        .btn-calc:active {
             transform: translateY(0);
         }
 
         .result-container {
-            margin-top: 32px;
-            padding-top: 32px;
+            margin-top: 28px;
+            padding-top: 24px;
             border-top: 1px solid var(--glass-border);
             display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .comparison-banner {
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            border: 1px solid transparent;
+        }
+
+        .comparison-banner.saved {
+            background: rgba(16, 185, 129, 0.12);
+            border-color: rgba(16, 185, 129, 0.3);
+            color: #6ee7b7;
+        }
+
+        .comparison-banner.increased {
+            background: rgba(239, 68, 68, 0.12);
+            border-color: rgba(239, 68, 68, 0.3);
+            color: #fca5a5;
+        }
+
+        .comparison-banner.equal {
+            background: rgba(56, 189, 248, 0.12);
+            border-color: rgba(56, 189, 248, 0.3);
+            color: #7dd3fc;
         }
 
         .result-card {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 16px;
-            padding: 24px;
+            padding: 22px;
             margin-bottom: 20px;
+            border: 1px solid var(--glass-border);
         }
 
         .result-row {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin-bottom: 12px;
+            font-size: 0.92rem;
         }
 
         .result-row:last-child {
@@ -204,30 +318,75 @@
         }
 
         .total-value {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--accent);
             font-family: 'Outfit', sans-serif;
+            font-weight: 700;
         }
 
         .breakdown-title {
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: 0.85rem;
+            font-weight: 700;
             margin-bottom: 12px;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
-        @media (max-width: 480px) {
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            margin-bottom: 6px;
+            font-size: 0.85rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 12px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .stat-box .title {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .stat-box .val {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        @media (max-width: 540px) {
             .container {
-                padding: 24px;
+                padding: 22px 18px;
             }
 
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
             }
 
-            .input-group {
+            .input-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tab-switch {
+                flex-direction: column;
+            }
+
+            .stat-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -236,169 +395,295 @@
 
 <body>
     <div class="container">
-        <h1>Tính Tiền Điện</h1>
-        <p class="subtitle">Biểu giá sinh hoạt mới nhất 2025 (VAT 8%)</p>
+        <div class="header-wrapper">
+            <div class="header-badge">⚡ CẬP NHẬT MỚI NHẤT 2026</div>
+            <h1>Tính Tiền Điện Sinh Hoạt</h1>
+            <p class="subtitle" id="formula-desc">
+                Biểu giá 5 bậc mới theo Quyết định 2892/QĐ-BCT (Áp dụng từ 01/11/2026)
+            </p>
+        </div>
 
-        <table class="pricing-table">
+        <!-- Tab chọn biểu giá -->
+        <div class="tab-switch">
+            <button class="tab-btn active" id="tab-new" onclick="switchPriceMode('new')">
+                Biểu giá mới 2026 (5 bậc - QĐ 2892)
+            </button>
+            <button class="tab-btn" id="tab-old" onclick="switchPriceMode('old')">
+                Biểu giá cũ (6 bậc - QĐ 1279)
+            </button>
+        </div>
+
+        <!-- Bảng giá -->
+        <table class="pricing-table" id="pricing-table">
             <thead>
                 <tr>
                     <th>Bậc</th>
-                    <th>Mức sử dụng (kWh)</th>
-                    <th>Giá (đ/kWh)</th>
+                    <th>Mức tiêu thụ</th>
+                    <th style="text-align: right;">Đơn giá (đ/kWh)</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>0 - 50</td>
-                    <td>1.984</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>51 - 100</td>
-                    <td>2.050</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>101 - 200</td>
-                    <td>2.380</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>201 - 300</td>
-                    <td>2.998</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>301 - 400</td>
-                    <td>3.350</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Trên 400</td>
-                    <td>3.460</td>
-                </tr>
+            <tbody id="pricing-tbody">
+                <!-- Nội dung bảng sẽ được render bằng JS -->
             </tbody>
         </table>
 
-        <div class="input-group">
+        <!-- Form nhập -->
+        <div class="input-grid">
             <div class="input-field">
                 <label for="month">Tháng</label>
                 <input type="number" id="month" placeholder="1-12" min="1" max="12">
             </div>
             <div class="input-field">
                 <label for="year">Năm</label>
-                <input type="number" id="year" placeholder="2025" min="2000">
+                <input type="number" id="year" placeholder="2026" min="2000">
+            </div>
+            <div class="input-field">
+                <label for="vat">Thuế VAT</label>
+                <select id="vat">
+                    <option value="0.08" selected>8% (Quy định hiện hành)</option>
+                    <option value="0.10">10% (Thuế chuẩn)</option>
+                    <option value="0">0% (Chưa VAT)</option>
+                </select>
             </div>
         </div>
 
         <div class="input-field">
-            <label for="usage">Chỉ số tiêu thụ (kWh)</label>
-            <input type="number" id="usage" placeholder="Nhập số kWh tiêu thụ" min="0">
+            <label for="usage">Chỉ số tiêu thụ điện (kWh)</label>
+            <input type="number" id="usage" placeholder="Ví dụ: 350" min="0" step="any" autofocus>
         </div>
 
-        <button onclick="calculateBill()">Tính tiền ngay</button>
+        <button class="btn-calc" onclick="calculateBill()">
+            <span>⚡</span> Tính tiền ngay
+        </button>
 
+        <!-- Kết quả -->
         <div id="result-container" class="result-container">
+            <!-- Banner so sánh biểu giá mới vs cũ -->
+            <div id="comparison-banner" class="comparison-banner"></div>
+
             <div class="result-card">
                 <div class="result-row">
-                    <span class="result-label">Tiền điện chưa VAT</span>
-                    <span id="base-amount" class="result-value">0 VND</span>
+                    <span class="result-label">Tiền điện chưa thuế:</span>
+                    <span id="base-amount" class="result-value">0 đ</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Thuế VAT (8%)</span>
-                    <span id="vat-amount" class="result-value">0 VND</span>
+                    <span class="result-label" id="vat-label">Thuế VAT (8%):</span>
+                    <span id="vat-amount" class="result-value">0 đ</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Tổng cộng</span>
-                    <span id="total-bill" class="result-value total-value">0 VND</span>
+                    <span class="result-label">Tổng tiền thanh toán:</span>
+                    <span id="total-bill" class="result-value total-value">0 đ</span>
                 </div>
             </div>
 
-            <div class="breakdown-title">Chi tiết từng bậc</div>
+            <div class="breakdown-title" id="breakdown-title">Chi tiết tính tiền từng bậc</div>
             <div id="breakdown-list"></div>
 
-            <div class="result-row" style="margin-top: 20px; font-size: 0.9rem;">
-                <span class="result-label">Số ngày trong tháng:</span>
-                <span id="days-count" class="result-value">0</span>
-            </div>
-            <div class="result-row" style="font-size: 0.9rem;">
-                <span class="result-label">Trung bình mỗi ngày:</span>
-                <span id="avg-daily" class="result-value">0 kWh</span>
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <div class="title">Số ngày trong tháng:</div>
+                    <div class="val" id="days-count">0 ngày</div>
+                </div>
+                <div class="stat-box">
+                    <div class="title">Trung bình sử dụng:</div>
+                    <div class="val" id="avg-daily">0 kWh/ngày</div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        const TIERS = [
-            { limit: 50, rate: 1984, label: "Bậc 1" },
-            { limit: 50, rate: 2050, label: "Bậc 2" },
-            { limit: 100, rate: 2380, label: "Bậc 3" },
-            { limit: 100, rate: 2998, label: "Bậc 4" },
-            { limit: 100, rate: 3350, label: "Bậc 5" },
-            { limit: Infinity, rate: 3460, label: "Bậc 6" }
+        // Cấu hình biểu giá
+        // Biểu giá mới 2026 theo QĐ 2892/QĐ-BCT (5 bậc)
+        const TIERS_NEW_2026 = [
+            { id: 1, limit: 100, rangeText: "0 - 100 kWh", rate: 1901, label: "Bậc 1" },
+            { id: 2, limit: 100, rangeText: "101 - 200 kWh", rate: 2289, label: "Bậc 2" },
+            { id: 3, limit: 200, rangeText: "201 - 400 kWh", rate: 2894, label: "Bậc 3" },
+            { id: 4, limit: 300, rangeText: "401 - 700 kWh", rate: 3456, label: "Bậc 4" },
+            { id: 5, limit: Infinity, rangeText: "Từ 701 kWh trở lên", rate: 3844, label: "Bậc 5" }
         ];
 
+        // Biểu giá cũ theo QĐ 1279/QĐ-BCT (6 bậc)
+        const TIERS_OLD = [
+            { id: 1, limit: 50, rangeText: "0 - 50 kWh", rate: 1984, label: "Bậc 1" },
+            { id: 2, limit: 50, rangeText: "51 - 100 kWh", rate: 2050, label: "Bậc 2" },
+            { id: 3, limit: 100, rangeText: "101 - 200 kWh", rate: 2380, label: "Bậc 3" },
+            { id: 4, limit: 100, rangeText: "201 - 300 kWh", rate: 2998, label: "Bậc 4" },
+            { id: 5, limit: 100, rangeText: "301 - 400 kWh", rate: 3350, label: "Bậc 5" },
+            { id: 6, limit: Infinity, rangeText: "Từ 401 kWh trở lên", rate: 3460, label: "Bậc 6" }
+        ];
+
+        let currentMode = 'new'; // 'new' | 'old'
+
+        function renderPricingTable() {
+            const tbody = document.getElementById("pricing-tbody");
+            const tiers = currentMode === 'new' ? TIERS_NEW_2026 : TIERS_OLD;
+            
+            let html = '';
+            tiers.forEach(t => {
+                html += `
+                    <tr>
+                        <td><strong>${t.label}</strong></td>
+                        <td>${t.rangeText}</td>
+                        <td style="text-align: right; font-weight: 600; color: var(--accent);">${t.rate.toLocaleString('vi-VN')} đ</td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = html;
+
+            const desc = document.getElementById("formula-desc");
+            if (currentMode === 'new') {
+                desc.innerText = "Biểu giá 5 bậc mới theo Quyết định 2892/QĐ-BCT (Áp dụng từ 01/11/2026)";
+            } else {
+                desc.innerText = "Biểu giá 6 bậc cũ theo Quyết định 1279/QĐ-BCT (Ban hành ngày 09/5/2025)";
+            }
+        }
+
+        function switchPriceMode(mode) {
+            currentMode = mode;
+            if (mode === 'new') {
+                document.getElementById("tab-new").classList.add("active");
+                document.getElementById("tab-old").classList.remove("active");
+            } else {
+                document.getElementById("tab-old").classList.add("active");
+                document.getElementById("tab-new").classList.remove("active");
+            }
+            renderPricingTable();
+            // Nếu đã nhập số điện thì tính lại ngay
+            if (document.getElementById("usage").value !== '') {
+                calculateBill();
+            }
+        }
+
+        function computeBillForTiers(usage, tiers) {
+            let remaining = usage;
+            let total = 0;
+            const breakdown = [];
+
+            for (const tier of tiers) {
+                if (remaining <= 0) break;
+                const tierUsage = Math.min(remaining, tier.limit);
+                const cost = tierUsage * tier.rate;
+                total += cost;
+                remaining -= tierUsage;
+                breakdown.push({
+                    tier,
+                    usage: tierUsage,
+                    cost
+                });
+            }
+
+            return { total, breakdown };
+        }
+
         function calculateBill() {
-            const usageInput = document.getElementById("usage").value;
+            const usageInput = document.getElementById("usage").value.trim();
             const monthInput = document.getElementById("month").value;
             const yearInput = document.getElementById("year").value;
+            const vatRate = parseFloat(document.getElementById("vat").value) || 0;
 
-            if (!usageInput || usageInput < 0) {
-                alert("Vui lòng nhập số kWh hợp lệ.");
+            if (usageInput === "" || isNaN(usageInput) || parseFloat(usageInput) < 0) {
+                alert("Vui lòng nhập chỉ số tiêu thụ điện (kWh) hợp lệ (>= 0).");
                 return;
             }
 
-            let usage = parseFloat(usageInput);
-            let month = parseInt(monthInput) || new Date().getMonth() + 1;
-            let year = parseInt(yearInput) || new Date().getFullYear();
+            const usage = parseFloat(usageInput);
+            const now = new Date();
+            const month = parseInt(monthInput) || (now.getMonth() + 1);
+            const year = parseInt(yearInput) || now.getFullYear();
 
-            let remainingUsage = usage;
-            let totalBaseAmount = 0;
+            // Tính theo biểu giá hiện tại được chọn
+            const activeTiers = currentMode === 'new' ? TIERS_NEW_2026 : TIERS_OLD;
+            const activeResult = computeBillForTiers(usage, activeTiers);
+
+            // Tính song song biểu giá còn lại để so sánh
+            const newResult = computeBillForTiers(usage, TIERS_NEW_2026);
+            const oldResult = computeBillForTiers(usage, TIERS_OLD);
+
+            const baseAmount = activeResult.total;
+            const vatAmount = baseAmount * vatRate;
+            const totalWithVat = baseAmount + vatAmount;
+
+            // Render chi tiết từng bậc
             let breakdownHtml = '';
-
-            TIERS.forEach((tier, index) => {
-                if (remainingUsage <= 0) return;
-
-                let tierUsage = Math.min(remainingUsage, tier.limit);
-                let tierCost = tierUsage * tier.rate;
-                totalBaseAmount += tierCost;
-                remainingUsage -= tierUsage;
-
+            activeResult.breakdown.forEach(item => {
                 breakdownHtml += `
-                    <div class="result-row" style="font-size: 0.85rem; margin-bottom: 8px;">
-                        <span class="result-label">${tier.label} (${tierUsage.toLocaleString()} kWh)</span>
-                        <span class="result-value">${tierCost.toLocaleString()} đ</span>
+                    <div class="breakdown-item">
+                        <span class="result-label">
+                            <strong>${item.tier.label}</strong> (${item.tier.rangeText}): 
+                            <span style="color: #e2e8f0;">${item.usage.toLocaleString('vi-VN')} kWh</span> × ${item.tier.rate.toLocaleString('vi-VN')} đ
+                        </span>
+                        <span class="result-value">${Math.round(item.cost).toLocaleString('vi-VN')} đ</span>
                     </div>
                 `;
             });
+            document.getElementById("breakdown-list").innerHTML = breakdownHtml;
 
-            const vatAmount = totalBaseAmount * 0.08;
-            const totalWithVat = totalBaseAmount + vatAmount;
+            // Banner so sánh giữa Biểu giá mới 2026 và Biểu giá cũ
+            const diffBeforeVat = newResult.total - oldResult.total;
+            const diffWithVat = diffBeforeVat * (1 + vatRate);
+            const banner = document.getElementById("comparison-banner");
 
-            // Date calculations
+            if (Math.abs(diffBeforeVat) < 1) {
+                banner.className = "comparison-banner equal";
+                banner.innerHTML = `
+                    <span>⚖️ <strong>So với biểu giá cũ (6 bậc):</strong> Chi phí xấp xỉ tương đương.</span>
+                `;
+            } else if (diffBeforeVat < 0) {
+                const saved = Math.abs(diffWithVat);
+                const percent = Math.abs((diffBeforeVat / oldResult.total) * 100).toFixed(1);
+                banner.className = "comparison-banner saved";
+                banner.innerHTML = `
+                    <span>🎉 <strong>Biểu giá mới 2026 tiết kiệm hơn:</strong> Giảm <strong>${Math.round(saved).toLocaleString('vi-VN')} đ</strong> (-${percent}%) so với biểu giá cũ 6 bậc.</span>
+                `;
+            } else {
+                const increased = diffWithVat;
+                const percent = ((diffBeforeVat / oldResult.total) * 100).toFixed(1);
+                banner.className = "comparison-banner increased";
+                banner.innerHTML = `
+                    <span>📈 <strong>So với biểu giá cũ (6 bậc):</strong> Tăng <strong>+${Math.round(increased).toLocaleString('vi-VN')} đ</strong> (+${percent}%) do tiêu thụ ở bậc cao (> 700 kWh).</span>
+                `;
+            }
+
+            // Tính số ngày và mức dùng TB
             const daysInMonth = new Date(year, month, 0).getDate();
             const avgDaily = usage / daysInMonth;
 
-            // Update UI
-            document.getElementById("base-amount").innerText = Math.round(totalBaseAmount).toLocaleString() + " đ";
-            document.getElementById("vat-amount").innerText = Math.round(vatAmount).toLocaleString() + " đ";
-            document.getElementById("total-bill").innerText = Math.round(totalWithVat).toLocaleString() + " đ";
-            document.getElementById("breakdown-list").innerHTML = breakdownHtml;
-            document.getElementById("days-count").innerText = daysInMonth;
-            document.getElementById("avg-daily").innerText = avgDaily.toFixed(2) + " kWh/ngày";
+            // Cập nhật giao diện
+            document.getElementById("base-amount").innerText = Math.round(baseAmount).toLocaleString('vi-VN') + " đ";
+            document.getElementById("vat-label").innerText = `Thuế VAT (${(vatRate * 100).toFixed(0)}%):`;
+            document.getElementById("vat-amount").innerText = Math.round(vatAmount).toLocaleString('vi-VN') + " đ";
+            document.getElementById("total-bill").innerText = Math.round(totalWithVat).toLocaleString('vi-VN') + " đ";
+            document.getElementById("days-count").innerText = `${daysInMonth} ngày (Tháng ${month}/${year})`;
+            document.getElementById("avg-daily").innerText = `${avgDaily.toFixed(2)} kWh/ngày`;
 
             document.getElementById("result-container").style.display = "block";
 
-            // Smooth scroll to result
+            // Cuộn xuống kết quả nhẹ nhàng
             setTimeout(() => {
                 document.getElementById("result-container").scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 100);
+            }, 50);
         }
 
-        // Set default values
-        document.getElementById("year").value = new Date().getFullYear();
-        document.getElementById("month").value = new Date().getMonth();
+        // Thiết lập giá trị mặc định khi tải trang
+        window.addEventListener("DOMContentLoaded", () => {
+            const today = new Date();
+            document.getElementById("year").value = today.getFullYear();
+            document.getElementById("month").value = today.getMonth() + 1;
+            renderPricingTable();
+
+            // Lắng nghe phím Enter trong ô nhập
+            document.getElementById("usage").addEventListener("keypress", (e) => {
+                if (e.key === "Enter") {
+                    calculateBill();
+                }
+            });
+            document.getElementById("vat").addEventListener("change", () => {
+                if (document.getElementById("usage").value !== '') {
+                    calculateBill();
+                }
+            });
+        });
     </script>
 </body>
 
